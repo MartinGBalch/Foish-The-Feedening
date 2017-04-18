@@ -10,7 +10,6 @@ public class FoodSpawner : MonoBehaviour {
     public float Timer;
     private float StartTime;
     private float StartCount;
-    public GameObject FeedPlatform;
 	// Use this for initialization
 	void Start ()
     {

@@ -25,6 +25,15 @@ public class SardineController : MonoBehaviour {
             Seeking = true;
         }
 
+        //if(other == null)
+        //{
+        //    Debug.Log("other");
+        //}
+        //else if (seeker == null)
+        //{
+        //    Debug.Log("seeker");
+        //}
+
         if (other.tag == "ItsaFuckingFish" && seeker.target == null && BigFoish == true)
         {
             if(other.transform.localScale.x <= 8)
@@ -37,7 +46,7 @@ public class SardineController : MonoBehaviour {
     }
 
 
-	void Start ()
+	void Awake ()
     {
         transform.localScale = new Vector3(5, 5, 5);
         Seeking = false;
@@ -52,6 +61,16 @@ public class SardineController : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        if (seeker.target != null && seeker != null)
+        {
+            if (seeker.target.transform.localScale.x > 8) { seeker.target = null; }
+            if (seeker.target.tag == "Food" && transform.localScale.x >= 15) { seeker.target = null; }
+
+        }
+        if (seeker.target == null)
+        {
+            Seeking = false;
+        }
         if (Seeking == true && seeker.target != null)
         {
             seeker.DoSeek();
@@ -61,17 +80,10 @@ public class SardineController : MonoBehaviour {
         {
             wander.DoWander();
         }
-        if(seeker.target == null)
-        {
-            Seeking = false;
-        }
+        
 
         
-        if(seeker.target != null)
-        {
-            if (seeker.target.transform.localScale.x > 8 ) { seeker.target = null; }
-            if (seeker.target.tag == "Food" && transform.localScale.x >= 15) { seeker.target = null; }
-        }
+       
 
         if (transform.localScale.x >= 15 && BigFoish == false) { BigFoish = true; }
         if(BigFoish == true)
