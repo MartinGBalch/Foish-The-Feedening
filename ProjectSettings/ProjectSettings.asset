@@ -453,7 +453,7 @@ PlayerSettings:
   XboxOnePersistentLocalStorageSize: 0
   vrEditorSettings: {}
   cloudServicesEnabled:
-    Collab: 0
+    Collab: 1
     UNet: 1
   cloudProjectId: 0fd8e7d4-ae80-49ca-87c4-5fd408faf213
   projectName: Foish The Feedening
