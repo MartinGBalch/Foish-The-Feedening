@@ -9,10 +9,10 @@ public class Oldman_walking : MonoBehaviour
     public float speed;
     private List<Vector3> pathToWalk;
     public Transform[] target;
-
+    public bool ShouldFeed = false;
     public float timer;
     public int LastRANDO;
-   
+    Oldman_feeding marty;
     void MakeApath()
     {
         Random.InitState((int)Time.time);
@@ -28,6 +28,7 @@ public class Oldman_walking : MonoBehaviour
 
         if (target != null)
        {
+            ShouldFeed = false;
             LastRANDO = Rando;
             pathToWalk = gm.FindPathBetween(transform, target[Rando]);
        }
@@ -37,6 +38,7 @@ public class Oldman_walking : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        marty = GetComponent<Oldman_feeding>();
         timer = 5;
         MakeApath();
         //if (target != null)
@@ -48,9 +50,11 @@ public class Oldman_walking : MonoBehaviour
     {
         if (pathToWalk.Count == 0)
         {
-           
+            ShouldFeed = true;
             timer -= Time.deltaTime;
-
+            
+           
+           
             if (timer <= 0)
             {
                 MakeApath();
@@ -58,9 +62,10 @@ public class Oldman_walking : MonoBehaviour
             }
             
         };
-
+        
+        if (ShouldFeed == true) { marty.DoFeed(); ShouldFeed = false; }
         //Fishing stuff
-
+         
 
 
         //MakeApath()
@@ -74,7 +79,11 @@ public class Oldman_walking : MonoBehaviour
             {
                 pathToWalk.RemoveAt(0);
             }
+
+            
         }
+
+       
         
 
         //transform.position += dir * Time.deltaTime;
