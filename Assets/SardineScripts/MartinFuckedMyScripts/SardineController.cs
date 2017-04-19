@@ -57,7 +57,26 @@ public class SardineController : MonoBehaviour {
         wander = GetComponent<SimpleWander>();
         seeker = GetComponent<PathlessSeeking>();
 	}
-	
+	//void SeperationForce()
+ //   {
+ //       Vector3 sSum = Vector3.zero;
+ //       int hood = 0;
+ //       Collider[] Hood = Physics.OverlapSphere(transform.position, radius);
+ //       foreach (Collider T in Hood)
+ //       {
+ //           if (T.GetComponent<Rigidbody>() == true || T.tag == "Wall")
+ //           {
+ //               hood++;
+ //               Rigidbody rb = T.GetComponent<Rigidbody>();
+                
+ //               sSum += (transform.position - T.transform.position) / radius;// * (radius - Vector3.Distance(transform.position, T.transform.position)) / radius;
+ //           }
+ //       }
+ //       sSum /= hood;
+
+ //      Vector3 Sforce = sSum.normalized * wander.speed - wander.rb.velocity;
+ //       wander.rb.AddForce(Sforce);
+ //   }
 	// Update is called once per frame
 	void Update ()
     {
@@ -75,12 +94,15 @@ public class SardineController : MonoBehaviour {
         {
             seeker.DoSeek();
             wander.DoObstacle();
+           // SeperationForce();
         }
        
         if(Seeking == false)
         {
             wander.DoWander();
+           // wander.DoNewWander();
             wander.DoObstacle();
+          //  SeperationForce();
         }
         
 

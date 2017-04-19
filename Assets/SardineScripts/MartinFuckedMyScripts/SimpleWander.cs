@@ -11,11 +11,13 @@ public class SimpleWander : MonoBehaviour {
     public float distance = 1;
     public float Timer = 5;
     private float StartTimer;
-    Rigidbody rb;
+     Rigidbody rb;
     public Vector3 steeringForce;
+    Vector3 targetN ;
     // Use this for initialization
     void Start ()
     {
+        targetN = transform.position;
         StartTimer = Timer;
         rb = GetComponent<Rigidbody>();
     }
@@ -23,6 +25,10 @@ public class SimpleWander : MonoBehaviour {
     {
         Timer -= Time.deltaTime;
         Vector3 target = Vector3.zero;
+
+
+        Random.InitState((int)transform.position.x);
+        
         target = Random.insideUnitCircle.normalized * radius;
 
         target = (Vector2)target + Random.insideUnitCircle * jitter;
@@ -39,33 +45,30 @@ public class SimpleWander : MonoBehaviour {
 
         Vector3 dir = (target - transform.position).normalized;
         Vector3 desiredVelocity = dir * speed;
+       
         
-        if(Timer <= 0)
-        {
-            Timer = StartTimer;
-            steeringForce = desiredVelocity - rb.velocity;
-        }
         
-
-
+       
+       
+        steeringForce = desiredVelocity - rb.velocity;
         rb.AddForce(steeringForce);
+         transform.forward = new Vector3(rb.velocity.x, 0, rb.velocity.z);
 
-        Vector3 head = rb.velocity;
-        head.y = 0;
-        transform.LookAt(transform.position + head, Vector3.up);
     }
     public void DoObstacle()
     {
         RaycastHit hit;
-        if(Physics.Raycast(transform.position,rb.velocity, out hit))
+        if(Physics.Raycast(transform.position,rb.velocity, out hit, 3))
         {
-           if(hit.collider.tag == "Wall" && hit.collider.tag == "ItsaFuckingFish")
+           if(hit.collider.tag == "Wall")
             {
-                rb.AddForce(hit.normal * speed);
+                Debug.Log("Wall Incoming");
+                rb.AddForce(hit.normal * speed * 5);
             }
         }
        
     }
+   
 
 
 
