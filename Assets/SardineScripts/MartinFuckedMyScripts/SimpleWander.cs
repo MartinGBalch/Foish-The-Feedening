@@ -59,7 +59,7 @@ public class SimpleWander : MonoBehaviour {
         RaycastHit hit;
         if(Physics.Raycast(transform.position,rb.velocity, out hit))
         {
-           if(hit.collider.tag == "Wall")
+           if(hit.collider.tag == "Wall" && hit.collider.tag == "ItsaFuckingFish")
             {
                 rb.AddForce(hit.normal * speed);
             }
