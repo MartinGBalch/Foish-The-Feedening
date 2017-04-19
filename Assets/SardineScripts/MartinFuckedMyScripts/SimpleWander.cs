@@ -62,7 +62,7 @@ public class SimpleWander : MonoBehaviour {
         {
            if(hit.collider.tag == "Wall")
             {
-                Debug.Log("Wall Incoming");
+                
                 rb.AddForce(hit.normal * speed * 5);
             }
         }
