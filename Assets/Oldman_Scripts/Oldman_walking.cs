@@ -17,7 +17,7 @@ public class Oldman_walking : MonoBehaviour
     {
         Random.InitState((int)Time.time);
         int Rando = Random.Range(0, target.Length);
-        if (Rando >= 3) { Rando = 0; }
+        //if (Rando >= 3) { Rando = 0; }
         if(Rando == LastRANDO)
         {
             if (LastRANDO == 0) { Rando++; }
@@ -50,7 +50,7 @@ public class Oldman_walking : MonoBehaviour
     {
         if (pathToWalk.Count == 0)
         {
-            ShouldFeed = true;
+           
             timer -= Time.deltaTime;
             
            
@@ -59,6 +59,7 @@ public class Oldman_walking : MonoBehaviour
             {
                 MakeApath();
                 timer = 5;
+                ShouldFeed = true;
             }
             
         };
