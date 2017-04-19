@@ -171,6 +171,7 @@ public class Flocking : MonoBehaviour
         if (/*IsEvading == true &&*/ Prey != null && AIstate == 2)
         {
             DoEvade();
+            DoObstacle();
             EvadeTime -= Time.deltaTime;
             if(EvadeTime <= 0)
             {

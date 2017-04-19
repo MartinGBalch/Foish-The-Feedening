@@ -74,6 +74,7 @@ public class SardineController : MonoBehaviour {
         if (Seeking == true && seeker.target != null)
         {
             seeker.DoSeek();
+            wander.DoObstacle();
         }
        
         if(Seeking == false)
