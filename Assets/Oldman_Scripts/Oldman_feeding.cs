@@ -32,21 +32,21 @@ public class Oldman_feeding : MonoBehaviour
             Instantiate(SpawnFood);
         }
     }
-    //void OnCollisionEnter(Collision collider)
-    //{
-    //    if(collider.gameObject.tag == "feed_plat")
-    //    {
-    //        kobey = transform.forward * 10;
+    void OnCollisionEnter(Collision collider)
+    {
+        if (collider.gameObject.tag == "feed_plat")
+        {
+            kobey = transform.forward * 10;
 
-    //        spawnCount = StartCount;
+            spawnCount = StartCount;
 
-    //        for (int i = 0; i < spawnCount; ++i)
-    //        {
-    //            float X = Random.Range(-radius, radius);
-    //            float Z = Random.Range(-radius, radius);
-    //            SpawnFood.transform.position = new Vector3(kobey.x + X, kobey.y, kobey.z + Z);
-    //            Instantiate(SpawnFood);
-    //        }
-    //    }
-    //}
+            for (int i = 0; i < spawnCount; ++i)
+            {
+                float X = Random.Range(-radius, radius);
+                float Z = Random.Range(-radius, radius);
+                SpawnFood.transform.position = new Vector3(kobey.x + X, kobey.y, kobey.z + Z);
+                Instantiate(SpawnFood);
+            }
+        }
+    }
 }
