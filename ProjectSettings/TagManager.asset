@@ -3,16 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-<<<<<<< HEAD
-  - Food
-  - ItsaFuckingFish
-  - Wall
-=======
-  - ItsaFuckingFish
-  - Food
-  - feed_plat
->>>>>>> c08725c394fd7f8c599a0e8ed34b2334e6f211f9
+  tags: []
   layers:
   - Default
   - TransparentFX
