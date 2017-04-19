@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 70600082}
   m_Layer: 0
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -999,11 +999,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7fc4a3294a65b144a96dd15405eafd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 10
   radius: 2
   jitter: 1
   distance: 2.5
-  Timer: 5
+  Timer: 1
   steeringForce: {x: 0, y: 0, z: 0}
 --- !u!114 &919970557
 MonoBehaviour:
@@ -1034,7 +1034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 15
+  speed: 10
 --- !u!136 &919970559
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1170,7 +1170,7 @@ GameObject:
   - component: {fileID: 1081638022}
   m_Layer: 0
   m_Name: Cube (8)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1514,7 +1514,7 @@ GameObject:
   - component: {fileID: 1280307526}
   m_Layer: 0
   m_Name: Cube (5)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1595,7 +1595,7 @@ GameObject:
   - component: {fileID: 1302814126}
   m_Layer: 0
   m_Name: Cube (4)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1676,7 +1676,7 @@ GameObject:
   - component: {fileID: 1428066114}
   m_Layer: 0
   m_Name: Cube (7)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1757,7 +1757,7 @@ GameObject:
   - component: {fileID: 1436718561}
   m_Layer: 0
   m_Name: Cube (10)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2194,7 +2194,7 @@ GameObject:
   - component: {fileID: 1590627685}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2275,7 +2275,7 @@ GameObject:
   - component: {fileID: 1643303513}
   m_Layer: 0
   m_Name: Cube (9)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2517,7 +2517,7 @@ MonoBehaviour:
   SpawnBaby: {fileID: 1380345645787170, guid: 3ec073bfc49a5464483975fbf4787caa, type: 2}
   radius: 15
   spawnCount: 8
-  Timer: 1
+  Timer: 7
 --- !u!4 &1994561955
 Transform:
   m_ObjectHideFlags: 0

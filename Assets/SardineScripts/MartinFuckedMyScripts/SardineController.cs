@@ -79,6 +79,7 @@ public class SardineController : MonoBehaviour {
         if(Seeking == false)
         {
             wander.DoWander();
+            wander.DoObstacle();
         }
         
 

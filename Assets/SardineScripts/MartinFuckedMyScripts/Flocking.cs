@@ -70,7 +70,7 @@ public class Flocking : MonoBehaviour
 
 
 
-        rbz.AddForce(steeringForce.normalized * 2);
+        rbz.AddForce(steeringForce.normalized * 4);
 
 
         //Vector3 head = rbz.velocity;
@@ -78,6 +78,18 @@ public class Flocking : MonoBehaviour
         //transform.LookAt(transform.position + head, Vector3.up);
 
        // if (Vector3.Distance(transform.position, Prey.transform.position) <= radius) { IsEvading = false; }
+
+    }
+    public void DoObstacle()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, rbz.velocity, out hit))
+        {
+            if (hit.collider.tag == "Wall")
+            {
+                rbz.AddForce(hit.normal * speed);
+            }
+        }
 
     }
     void flocking()
@@ -134,7 +146,7 @@ public class Flocking : MonoBehaviour
         //rbz.AddForce(Cforce + Aforce);
         //rbz.AddForce(Sforce);
         }
-       
+        DoObstacle();
 
         Vector3 head = rbz.velocity;
         head.y = 0;
@@ -154,7 +166,7 @@ public class Flocking : MonoBehaviour
 
         if (/*IsEvading == false ||*/ AIstate == 0) { flocking();  }
 
-        if (AIstate == 1) { DoWander(); }
+        if (AIstate == 1) { DoWander();  }
 
         if (/*IsEvading == true &&*/ Prey != null && AIstate == 2)
         {

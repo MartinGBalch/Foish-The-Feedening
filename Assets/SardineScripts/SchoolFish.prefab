@@ -733,7 +733,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1875376945280608}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -17.98162, y: 5.104, z: 1.3836784}
+  m_LocalPosition: {x: 1.4657135, y: 5.104, z: -7.8641777}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4532931856495188}
@@ -1148,7 +1148,7 @@ MonoBehaviour:
   Prey: {fileID: 0}
   radius: 3
   Wradius: 2
-  speed: 15
+  speed: 10
   IsWander: 1
   AIstate: 1
   jitter: 1

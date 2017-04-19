@@ -54,34 +54,17 @@ public class SimpleWander : MonoBehaviour {
         head.y = 0;
         transform.LookAt(transform.position + head, Vector3.up);
     }
-    public void DoTimedWander()
+    public void DoObstacle()
     {
-
-        Vector3 target = Vector3.zero;
-        target = Random.insideUnitCircle.normalized * radius;
-
-        target = (Vector2)target + Random.insideUnitCircle * jitter;
-        target = target.normalized * radius;
-
-
-        target.z = target.y;
-        target.y = 0.0f;
-        target += transform.position;
-        target += transform.forward * distance;
-
-
-
-
-        Vector3 dir = (target - transform.position).normalized;
-        Vector3 desiredVelocity = dir * speed;
-
-        Vector3 steeringForce = desiredVelocity - rb.velocity;
-
-        rb.AddForce(steeringForce);
-
-        Vector3 head = rb.velocity;
-        head.y = 0;
-        transform.LookAt(transform.position + head, Vector3.up);
+        RaycastHit hit;
+        if(Physics.Raycast(transform.position,rb.velocity, out hit))
+        {
+           if(hit.collider.tag == "Wall")
+            {
+                rb.AddForce(hit.normal * speed);
+            }
+        }
+       
     }
 
 
