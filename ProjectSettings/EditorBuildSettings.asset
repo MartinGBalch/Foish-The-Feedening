@@ -4,4 +4,7 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/TransferFolder/FoishTheFeedening.unity
+    guid: 96211afcd69cdc14a9285c77b62819ec
