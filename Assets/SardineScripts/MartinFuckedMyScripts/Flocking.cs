@@ -83,11 +83,11 @@ public class Flocking : MonoBehaviour
     public void DoObstacle()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, rbz.velocity, out hit))
+        if (Physics.Raycast(transform.position, rbz.velocity, out hit, 3))
         {
             if (hit.collider.tag == "Wall")
             {
-                rbz.AddForce(hit.normal * speed);
+                rbz.AddForce(hit.normal * speed * 20);
             }
         }
 

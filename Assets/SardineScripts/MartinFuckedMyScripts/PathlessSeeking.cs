@@ -7,8 +7,8 @@ public class PathlessSeeking : MonoBehaviour {
   
     public GameObject target;
     public float speed = 1;
-    private Vector3 velocity;
-    Rigidbody rb;
+    public Vector3 velocity;
+    public Rigidbody rb;
     // Use this for initialization
 
     void Start()

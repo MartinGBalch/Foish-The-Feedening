@@ -13,21 +13,21 @@ public class SimpleWander : MonoBehaviour {
     private float StartTimer;
      Rigidbody rb;
     public Vector3 steeringForce;
-    Vector3 targetN ;
+    public Vector3 target;
     // Use this for initialization
     void Start ()
     {
-        targetN = transform.position;
+       
         StartTimer = Timer;
         rb = GetComponent<Rigidbody>();
     }
 	public void DoWander()
     {
         Timer -= Time.deltaTime;
-        Vector3 target = Vector3.zero;
+         target = Vector3.zero;
 
 
-        Random.InitState((int)transform.position.x);
+        //Random.InitState((int)transform.position.x);
         
         target = Random.insideUnitCircle.normalized * radius;
 
@@ -52,7 +52,7 @@ public class SimpleWander : MonoBehaviour {
        
         steeringForce = desiredVelocity - rb.velocity;
         rb.AddForce(steeringForce);
-         transform.forward = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+        transform.forward = new Vector3(rb.velocity.x, 0, rb.velocity.z);
 
     }
     public void DoObstacle()
@@ -63,7 +63,7 @@ public class SimpleWander : MonoBehaviour {
            if(hit.collider.tag == "Wall")
             {
                 
-                rb.AddForce(hit.normal * speed * 5);
+                rb.AddForce(hit.normal * speed * 20);
             }
         }
        

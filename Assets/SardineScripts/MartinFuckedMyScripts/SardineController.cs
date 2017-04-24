@@ -44,7 +44,21 @@ public class SardineController : MonoBehaviour {
             
         }
     }
-
+    void OnCollisionEnter(Collision collider)
+    {
+        if(collider.gameObject.tag == "ItsaFuckingFish")
+        {
+            if (Seeking == false)
+            {
+                wander.target *= -1;
+            }
+            if (Seeking == true)
+            {
+                //seeker.rb.velocity *= 1;
+            }
+        }
+     
+    }
 
 	void Awake ()
     {
