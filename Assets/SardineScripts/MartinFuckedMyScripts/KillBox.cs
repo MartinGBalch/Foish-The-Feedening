@@ -1,15 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class KillBox : MonoBehaviour {
 
     public GameObject T;
-
+    public Button Play;
 
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+    {
+        Play = Play.GetComponent<Button>();
 	}
 	
 
@@ -21,7 +24,10 @@ public class KillBox : MonoBehaviour {
     }
 
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update () {}
+
+    public void Observe()
+    {
+        SceneManager.LoadScene("FoishTheFeedening");
+    }
 }

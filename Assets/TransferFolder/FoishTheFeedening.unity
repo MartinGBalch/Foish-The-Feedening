@@ -2781,7 +2781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e8ba1b9c9f46942aebaccacf639bde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnFood: {fileID: 1561846926889800, guid: 3ec073bfc49a5464483975fbf4787caa, type: 2}
+  SpawnFood: {fileID: 1230567188620464, guid: 9363b91f71017024d82a4a38b7a62afb, type: 2}
   radius: 20
   spawnCount: 20
   Feeder: []
