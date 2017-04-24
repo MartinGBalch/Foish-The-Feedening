@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 114365531389299622}
   - component: {fileID: 114763535771711694}
   m_Layer: 0
-  m_Name: SmallFoish (1)
+  m_Name: SmallFoish (1) 1
   m_TagString: ItsaFuckingFish
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0

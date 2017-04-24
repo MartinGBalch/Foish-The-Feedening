@@ -459,8 +459,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 791206010}
-  m_LocalRotation: {x: 0.2869718, y: 0.7121456, z: 0.431554, w: -0.47355783}
-  m_LocalPosition: {x: 40.65664, y: -51.241634, z: 19.361303}
+  m_LocalRotation: {x: -0.19434154, y: 0.65320706, z: 0.17889413, w: 0.7096118}
+  m_LocalPosition: {x: -7.261304, y: 10.957905, z: -6.9782615}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1522,7 +1522,6 @@ GameObject:
   - component: {fileID: 1994561954}
   - component: {fileID: 1994561956}
   - component: {fileID: 1994561957}
-  - component: {fileID: 1994561958}
   m_Layer: 0
   m_Name: SpawnStuff
   m_TagString: Untagged
@@ -1543,8 +1542,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnBaby: {fileID: 1230567188620464, guid: 9363b91f71017024d82a4a38b7a62afb, type: 2}
   radius: 15
-  spawnCount: 7
-  Timer: 10
+  spawnCount: 5
+  Timer: 8
 --- !u!4 &1994561955
 Transform:
   m_ObjectHideFlags: 0
@@ -1552,7 +1551,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1994561953}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1112344, y: 2.95, z: 7.55}
+  m_LocalPosition: {x: 1.1112344, y: 4.84, z: 7.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1570,8 +1569,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Foish: {fileID: 1288851980832924, guid: bc68ba29e603a484c8bc3e8ac6120d5f, type: 2}
-  radius: 20
-  spawnCount: 40
+  radius: 24
+  spawnCount: 15
 --- !u!114 &1994561957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1584,20 +1583,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Foish: {fileID: 1414017037422118, guid: a89cfdf88b1995b41a6ca8c8754aa726, type: 2}
-  radius: 20
-  spawnCount: 150
---- !u!114 &1994561958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1994561953}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 695869cba8511d4459e2bfded6d97ebe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpawnBaby: {fileID: 1414017037422118, guid: a89cfdf88b1995b41a6ca8c8754aa726, type: 2}
-  radius: 20
-  spawnCount: 5
-  Timer: 15
+  radius: 24
+  spawnCount: 75

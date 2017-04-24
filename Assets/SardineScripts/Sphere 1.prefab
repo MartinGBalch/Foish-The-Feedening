@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33135391536913454}
   - component: {fileID: 135164627653802972}
   - component: {fileID: 23162660343339750}
+  - component: {fileID: 114118886635008318}
   m_Layer: 0
   m_Name: Sphere 1
   m_TagString: Food
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1230567188620464}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.879341, y: 2.95, z: 1.990036}
+  m_LocalPosition: {x: 6.9643803, y: 4.84, z: 7.307378}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,6 +81,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1230567188620464}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114118886635008318
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1230567188620464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d92b5678eb0e654e8113adbd8b3d43c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Growth: 1
 --- !u!135 &135164627653802972
 SphereCollider:
   m_ObjectHideFlags: 1
