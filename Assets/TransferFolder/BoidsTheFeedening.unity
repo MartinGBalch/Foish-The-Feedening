@@ -300,7 +300,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 843740dbe549a4a6ba9556d1b80001f5, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 10.700003
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 843740dbe549a4a6ba9556d1b80001f5, type: 2}
       propertyPath: m_LocalPosition.z
@@ -459,8 +459,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 791206010}
-  m_LocalRotation: {x: -0.19434154, y: 0.65320706, z: 0.17889413, w: 0.7096118}
-  m_LocalPosition: {x: -7.261304, y: 10.957905, z: -6.9782615}
+  m_LocalRotation: {x: -0.011176404, y: 0.9608579, z: 0.27402812, w: 0.039189145}
+  m_LocalPosition: {x: 6.2477765, y: -63.377407, z: 76.9527}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -766,7 +766,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1242115390}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.6, y: -29.559994, z: 7.2}
+  m_LocalPosition: {x: 0.6, y: -53.96, z: 7.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1568,7 +1568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f186bdf1f7458842a4ef73e39ce622f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Foish: {fileID: 1288851980832924, guid: bc68ba29e603a484c8bc3e8ac6120d5f, type: 2}
+  Foish: {fileID: 1288851980832924, guid: 3f8a3a23ccc35fc46aea5ef6dd0b18fc, type: 2}
   radius: 24
   spawnCount: 15
 --- !u!114 &1994561957
