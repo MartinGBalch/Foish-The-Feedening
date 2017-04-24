@@ -834,7 +834,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1288851980832924}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -10.275478, y: 4.84, z: 4.697967}
+  m_LocalPosition: {x: -8.585596, y: 4.02, z: -6.9684644}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 4271585195266612}
@@ -1184,6 +1184,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed: 10
+  velocity: {x: 0, y: 0, z: 0}
+  rb: {fileID: 0}
 --- !u!136 &136319129079368862
 CapsuleCollider:
   m_ObjectHideFlags: 1
