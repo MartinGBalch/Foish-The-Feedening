@@ -1522,6 +1522,7 @@ GameObject:
   - component: {fileID: 1994561954}
   - component: {fileID: 1994561956}
   - component: {fileID: 1994561957}
+  - component: {fileID: 1994561958}
   m_Layer: 0
   m_Name: SpawnStuff
   m_TagString: Untagged
@@ -1540,10 +1541,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 695869cba8511d4459e2bfded6d97ebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnBaby: {fileID: 1561846926889800, guid: 3ec073bfc49a5464483975fbf4787caa, type: 2}
+  SpawnBaby: {fileID: 1230567188620464, guid: 9363b91f71017024d82a4a38b7a62afb, type: 2}
   radius: 15
-  spawnCount: 8
-  Timer: 7
+  spawnCount: 7
+  Timer: 10
 --- !u!4 &1994561955
 Transform:
   m_ObjectHideFlags: 0
@@ -1570,7 +1571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Foish: {fileID: 1288851980832924, guid: bc68ba29e603a484c8bc3e8ac6120d5f, type: 2}
   radius: 20
-  spawnCount: 25
+  spawnCount: 40
 --- !u!114 &1994561957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1584,4 +1585,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Foish: {fileID: 1414017037422118, guid: a89cfdf88b1995b41a6ca8c8754aa726, type: 2}
   radius: 20
-  spawnCount: 100
+  spawnCount: 150
+--- !u!114 &1994561958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1994561953}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 695869cba8511d4459e2bfded6d97ebe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnBaby: {fileID: 1414017037422118, guid: a89cfdf88b1995b41a6ca8c8754aa726, type: 2}
+  radius: 20
+  spawnCount: 5
+  Timer: 15
