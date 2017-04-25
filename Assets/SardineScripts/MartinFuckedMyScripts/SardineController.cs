@@ -17,12 +17,16 @@ public class SardineController : MonoBehaviour {
     public bool Seeking = false; // Wander-True    Seeker-False
     public bool BigFoish = false;
     bool Dead = false;
+
+
+   
     void OnTriggerStay(Collider other)
     {
         if(other.tag == "Food" && seeker.target == null && BigFoish == false)
         {
             seeker.target = other.gameObject;
             Seeking = true;
+        
         }
 
         //if(other == null)
@@ -40,6 +44,7 @@ public class SardineController : MonoBehaviour {
             {
                 seeker.target = other.gameObject;
                 Seeking = true;
+                
             }
             
         }
@@ -94,6 +99,8 @@ public class SardineController : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        
+       
         if (seeker.target != null && seeker != null)
         {
             if (seeker.target.transform.localScale.x > 8) { seeker.target = null; }
@@ -106,6 +113,7 @@ public class SardineController : MonoBehaviour {
         }
         if (Seeking == true && seeker.target != null)
         {
+           
             seeker.DoSeek();
             wander.DoObstacle();
            // SeperationForce();
@@ -132,22 +140,22 @@ public class SardineController : MonoBehaviour {
             {
                 Dead = true;
             }
-            if(Dead == true)
-            {
-                for(int i = 0; i < SpawnCountz; ++i)
-                {
-                    //SpawnBabyz.GetComponent<SardineController>().Start();
-                    float X = Random.Range(-3, 3);
-                    float Z = Random.Range(-3, 3);
-                    //SpawnBabyz.transform.position = new Vector3(transform.position.x + X, transform.position.y, transform.position.z + Z);
-                    var t = Instantiate(gameObject);
-                    t.transform.position = new Vector3(transform.position.x + X, transform.position.y, transform.position.z + Z);
-                    //t.GetComponent<SardineController>().Start();
-                    //t.GetComponent<SardineController>().SpawnBabyz = SpawnBabyz;
-                }
-                Destroy(gameObject);
-            }
+            
         }
-
-	}
+        if (Dead == true)
+        {
+            for (int i = 0; i < SpawnCountz; ++i)
+            {
+                //SpawnBabyz.GetComponent<SardineController>().Start();
+                float X = Random.Range(-3, 3);
+                float Z = Random.Range(-3, 3);
+                //SpawnBabyz.transform.position = new Vector3(transform.position.x + X, transform.position.y, transform.position.z + Z);
+                var t = Instantiate(gameObject);
+                t.transform.position = new Vector3(transform.position.x + X, transform.position.y, transform.position.z + Z);
+                //t.GetComponent<SardineController>().Start();
+                //t.GetComponent<SardineController>().SpawnBabyz = SpawnBabyz;
+            }
+            Destroy(gameObject);
+        }
+    }
 }

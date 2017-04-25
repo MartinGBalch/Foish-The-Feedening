@@ -8,7 +8,7 @@ public class FishSchoolEvade : MonoBehaviour {
     // Use this for initialization
     public float speed = 1;
     private Vector3 velocity;
-    public float ChaseAngle;
+    //public float ChaseAngle;
     Rigidbody rb;
     void Start()
     {

@@ -65,6 +65,17 @@ public class SimpleWander : MonoBehaviour {
                 
                 rb.AddForce(hit.normal * speed * 20);
             }
+            if (hit.collider.tag == "Food" && transform.localScale.x < 15)
+            {
+                transform.localScale += new Vector3(1,1,1);
+                //collider.gameObject.GetComponent<SardineController>().Seeking = false;
+                Destroy(hit.collider.gameObject);
+            }
+            if(hit.collider.tag == "ItsaFuckingFish" && hit.transform.localScale.x <= 8 && transform.localScale.x >= 15)
+            {
+                gameObject.GetComponent<SardineController>().Hunger = gameObject.GetComponent<SardineController>().StartHunger;
+                Destroy(hit.collider.gameObject);
+            }
         }
        
     }

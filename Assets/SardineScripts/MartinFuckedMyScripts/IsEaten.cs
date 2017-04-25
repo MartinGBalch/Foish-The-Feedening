@@ -6,14 +6,12 @@ public class IsEaten : MonoBehaviour {
 
     public float Growth;
     private Vector3 growth;
-
+    float timer = 30;
 	void OnCollisionEnter(Collision collider)
     {
         if(collider.gameObject.tag == "ItsaFuckingFish" && collider.gameObject.transform.localScale.x < 15)
         {
-            collider.transform.localScale += growth;
-            //collider.gameObject.GetComponent<SardineController>().Seeking = false;
-            Destroy(gameObject);
+           
         }
     }
     
@@ -27,7 +25,12 @@ public class IsEaten : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+    {
+        timer -= Time.deltaTime;
+		if(timer <= 0)
+        {
+            Destroy(gameObject);
+        }
 	}
 }

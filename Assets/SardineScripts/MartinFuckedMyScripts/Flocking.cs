@@ -89,6 +89,7 @@ public class Flocking : MonoBehaviour
             {
                 rbz.AddForce(hit.normal * speed * 20);
             }
+           
         }
 
     }
